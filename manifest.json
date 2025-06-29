@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Biên Dịch Convert v2.0",
+  "version": "2.0",
+  "description": "Chuyển đổi văn bản truyện convert sang văn dịch mượt mà hơn bằng Google Gemini. Tối ưu hóa và thêm nhiều tính năng mới.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Mở Cài đặt Biên Dịch Convert"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

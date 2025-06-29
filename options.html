@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Cài đặt Biên Dịch Convert</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cài đặt Biên Dịch Convert</h1>
+            <p>Cấu hình API và quản lý các trang web đã lưu.</p>
+        </header>
+
+        <div id="status-notification" class="notification" style="display: none;"></div>
+
+        <div class="card">
+            <h2>Cấu hình API</h2>
+            <div class="form-group">
+                <label for="apiKey">Google Gemini API Key:</label>
+                <div class="input-with-icon">
+                    <input type="password" id="apiKey" placeholder="Dán API Key của bạn vào đây">
+                    <button id="toggle-visibility" class="icon-btn" title="Hiện/Ẩn Key">👁️</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="model">Chọn model:</label>
+                <select id="model" disabled>
+                    <option>Nhập API Key để tải model</option>
+                </select>
+            </div>
+            <button id="save-settings" class="btn btn-primary">Lưu cấu hình API</button>
+        </div>
+
+        <div class="card">
+            <h2>Quản lý vùng chọn cho website</h2>
+            <p>Các vùng chọn được lưu tự động khi bạn dùng nút 'Chọn vùng nội dung' trên website. Bạn cũng có thể sửa selector trực tiếp tại đây.</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Website</th>
+                            <th>Selector (Vùng nội dung)</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sites-tbody">
+                        <!-- Dữ liệu sẽ được chèn vào đây bởi JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <p>Biên Dịch Convert v2.0 - Chúc bạn đọc truyện vui vẻ!</p>
+        </footer>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
